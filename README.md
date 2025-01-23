@@ -1,63 +1,44 @@
+# Nexo: Voice & Text Food Ordering Assistant 🍔🎤
 
-## Overview
-Nexo is an AI-powered food ordering assistant that lets users search restaurant menus via voice or text input. Built with Streamlit, it analyzes CSV datasets (items.csv and restaurants.csv) using OpenAI's GPT-3.5 Turbo and LangChain to recommend top food matches with their respective restaurants. Perfect for quick, voice-enabled food discovery!
-## Features
-- Voice ordering with real-time transcription
-- Text-based chatbot interface  
-- Smart menu recommendations
-- Restaurant suggestions
-- Image support for menu items
+An AI-powered assistant that helps users discover food items and restaurants by querying CSV datasets. Supports **voice** and **text input** to generate a curated list of dishes with restaurant details.
 
-## Tech Stack
-- **Frontend**: Streamlit
-- **AI/ML**: 
-  - OpenAI GPT-3.5
-  - LangChain
-  - RAG (Retrieval Augmented Generation)
-- **Data**: 
-  - Pandas
-  - CSV storage
-- **Audio**: audio_recorder_streamlit
+---
 
-## Installation
-```bash
-pip install streamlit openai pandas langchain audio_recorder_streamlit
-```
+## Core Features ✨
 
-## Configuration
-1. Add OpenAI API key to environment:
-```bash
-export OPENAI_API_KEY=\"your-api-key\"
-```
+### **Voice & Text Input**
+- 🎤 Record orders via microphone (uses `audio_recorder_streamlit`).
+- 📝 Type requests directly into the chat interface.
+- 🔄 Voice recordings are transcribed using OpenAI’s Whisper model.
 
-2. Prepare data files:
-- items.csv
-- restaurants.csv 
-- item_images/
+### **AI-Powered Analysis**
+- 🤖 Uses **GPT-3.5 Turbo** and LangChain’s `pandas_dataframe_agent`.
+- 📊 Queries two CSV datasets:
+  - `items.csv`: Food menu items (e.g., dish names, prices).
+  - `restaurants.csv`: Restaurant details (e.g., names, locations).
 
-## Usage
-```bash
-streamlit run project.py
-```
+### **Dynamic Responses**
+- 📋 Lists **top 8 matching items** per request.
+- 🏠 Includes restaurant names for each dish.
+- 🚫 Avoids disclosing internal dataset details (e.g., restaurant count).
 
-## Project Structure
-```
-├── project.py
-├── data/
-│   ├── items.csv
-│   └── restaurants.csv
-└── item_images/
-```
+---
 
-## How It Works
-1. Loads restaurant and menu data
-2. Accepts voice/text input
-3. Processes using LangChain + OpenAI
-4. Returns recommendations and responses
-5. Displays relevant menu images
+## Technical Components ⚙️
 
-## License
-MIT
+### **Backend**
+- OpenAI API for text generation (`gpt-3.5-turbo`) and speech-to-text (`whisper-1`).
+- LangChain agents to interact with CSV data.
+- Base64 image encoding (optional, commented out in code).
+
+### **Frontend**
+- Streamlit-based UI with a sidebar and main interaction panel.
+
+---
+
+## Use Case Example 💬
+*User says*: *"Find me vegetarian sushi near downtown"*  
+*Nexo responds*:  
 
 ## Author
 Mansour Alhamami" > README.md
