@@ -21,15 +21,15 @@ Intelligent food ordering system using voice commands and text chat with AI-powe
 - **Audio**: audio_recorder_streamlit
 
 ## Installation
-\`\`\`bash
+```bash
 pip install streamlit openai pandas langchain audio_recorder_streamlit
-\`\`\`
+```
 
 ## Configuration
 1. Add OpenAI API key to environment:
-\`\`\`bash
+```bash
 export OPENAI_API_KEY=\"your-api-key\"
-\`\`\`
+```
 
 2. Prepare data files:
 - items.csv
@@ -37,18 +37,18 @@ export OPENAI_API_KEY=\"your-api-key\"
 - item_images/
 
 ## Usage
-\`\`\`bash
+```bash
 streamlit run project.py
-\`\`\`
+```
 
 ## Project Structure
-\`\`\`
+```
 ├── project.py
 ├── data/
 │   ├── items.csv
 │   └── restaurants.csv
 └── item_images/
-\`\`\`
+```
 
 ## How It Works
 1. Loads restaurant and menu data
@@ -63,31 +63,4 @@ MIT
 ## Author
 Mansour Alhamami" > README.md
 
-# Create sample CSV files
-echo "item_id,name,price,description,category,restaurant_id
-1,Pizza,10.99,Delicious pizza,Italian,1
-2,Burger,8.99,Juicy burger,American,2" > data/items.csv
 
-echo "restaurant_id,name,cuisine,rating,location
-1,Italian Place,Italian,4.5,Downtown
-2,Burger Joint,American,4.2,Uptown" > data/restaurants.csv
-
-# Set environment variable for OpenAI API key
-setx OPENAI_API_KEY "your-api-key"
-
-# Create .gitignore
-echo "venv/
-__pycache__/
-.env
-*.pyc
-.DS_Store" > .gitignore
-
-# Initialize git repository
-git init
-git add .
-git commit -m "Initial commit"
-
-echo "Project setup complete. Remember to:"
-echo "1. Add your actual OpenAI API key"
-echo "2. Add your menu item images to item_images/"
-echo "3. Update CSV files with your actual data"
