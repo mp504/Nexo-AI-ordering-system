@@ -62,6 +62,6 @@ An AI-powered assistant that helps users discover food items and restaurants by 
 - 📂 **Ensure CSVs have columns** matching the code’s expectations (e.g., `item_name`, `restaurant_id`).  
    
 ## Author
-Mansour Alhamami" > README.md
+Mansour Alhamami
 
 
