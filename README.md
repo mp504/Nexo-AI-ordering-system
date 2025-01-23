@@ -1,18 +1,3 @@
-# Create project structure
-mkdir OrderSystem
-cd OrderSystem
-mkdir data
-mkdir item_images
-
-# Create virtual environment
-python -m venv venv
-.\venv\Scripts\activate
-
-# Install dependencies
-pip install streamlit openai pandas langchain audio_recorder_streamlit langchain-experimental
-
-# Create necessary files
-echo "# Nexo - AI-Powered Food Ordering Assistant
 
 ## Overview
 Intelligent food ordering system using voice commands and text chat with AI-powered recommendations.
