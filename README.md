@@ -39,7 +39,25 @@ An AI-powered assistant that helps users discover food items and restaurants by 
 ## Use Case Example 💬
 *User says*: *"Find me vegetarian sushi near downtown"*  
 *Nexo responds*:  
+1. Vegetarian Sushi Roll - Sushi Palace  
+2. Avocado Maki - Tokyo Grill  
+3. ... *(top 8 results)*  
 
+
+---
+
+## Setup & Usage 🚀
+
+1. **Replace Placeholders**:
+   - Add your OpenAI API key (replace `sk-proj-...` in the code).
+   - Update CSV paths to your dataset locations.
+
+2. **Run Locally**:
+   ```bash
+   streamlit run app.py
+   ```
+
+   
 ## Author
 Mansour Alhamami" > README.md
 
