@@ -56,7 +56,10 @@ An AI-powered assistant that helps users discover food items and restaurants by 
    ```bash
    streamlit run app.py
    ```
+## Notes ⚠️
 
+- 🔒 **Avoid exposing API keys in code** — Use `.env` files for production.  
+- 📂 **Ensure CSVs have columns** matching the code’s expectations (e.g., `item_name`, `restaurant_id`).  
    
 ## Author
 Mansour Alhamami" > README.md
