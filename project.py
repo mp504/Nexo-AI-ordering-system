@@ -11,11 +11,11 @@ from langchain_community.chat_models import ChatOpenAI
 
 
 
-api_key = "sk-proj-j2dJBk7ecjzkSYyFjr2WT3BlbkFJM3eO1kS78NSjZUxeUUBd"
+api_key = "API key"
 
 llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-1106", openai_api_key=api_key)
-items_df = pd.read_csv("/Users/ibrahimalhamami/Desktop/project/items.csv")
-restaurants_df = pd.read_csv("/Users/ibrahimalhamami/Desktop/project/restaurants.csv")
+items_df = pd.read_csv("/path/items.csv")
+restaurants_df = pd.read_csv("path/restaurants.csv")
 
 
 
@@ -23,7 +23,7 @@ def images_base64():
 
 
     # Specify the directory containing your images
-    image_directory = "/Users/ibrahimalhamami/Desktop/project/item_images"
+    image_directory = "path/item_images"
 
     # Get a list of image filenames
     image_files = os.listdir(image_directory)
